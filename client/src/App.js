@@ -3,6 +3,7 @@ import { Router, Switch, Route } from 'react-router-dom';
 
 import SplashPage from './Components/Home/SplashPage'
 import Home from './Components/Home/Home'
+import Profile from './Components/Profile/Profile'
 import Callback from './Components/Callback/Callback'
 
 import Auth from './Auth/Auth';
@@ -24,6 +25,7 @@ class App extends Component {
         <Switch>
           <Route path="/" exact component={SplashPage} />
           <Route path="/home" exact component={Home} />
+          <Route path="/profile" exact component={Profile} />
           <Route path="/callback" render={(props) => {
             handleAuthentication(props);
             return <Callback {...props} />

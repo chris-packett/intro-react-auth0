@@ -64,6 +64,17 @@ class Home extends Component {
                     }
                     {
                         this.state.isLoggedIn && (
+                            <Button
+                                bsStyle="primary"
+                                className="btn-margin"
+                                onClick={() => this.goTo('profile')}
+                            >
+                                Profile
+                            </Button>
+                        )
+                    }
+                    {
+                        this.state.isLoggedIn && (
                         <Button
                             bsStyle="primary"
                             className="btn-margin"
